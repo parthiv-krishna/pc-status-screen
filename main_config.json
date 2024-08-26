@@ -1,0 +1,5 @@
+{
+  "BAUDRATE": 115200,
+  "CPU_CORES": 24,
+  "RAM_GB": 32
+}

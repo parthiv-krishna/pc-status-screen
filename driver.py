@@ -52,8 +52,8 @@ def main(config_path: str, port: str | None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-c", "--config", help="Path to config.json", default="config.json")
-    parser.add_argument("-p", "--port", help="Serial port where PyPortal is connected", default=None)
+    parser.add_argument("-c", "--config", help="Path to driver_config.json", default="./driver_config.json")
+    parser.add_argument("-p", "--port", help="Serial port where PyPortal is connected. If not provided, will auto-detect", default=None)
 
     args = parser.parse_args()
     main(args.config, args.port)

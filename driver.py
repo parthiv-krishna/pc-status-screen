@@ -45,7 +45,7 @@ def main(config_path: str, port: str | None):
     with(serial.Serial(port, config["BAUDRATE"])) as ser:
         while True:
             stats = get_stats(config)
-            stats_bytes = json.dumps(stats).encode()
+            stats_bytes = f"{stats}\n".encode()
             ser.write(stats_bytes)
             time.sleep(config["REFRESH_SECONDS"])
             

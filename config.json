@@ -1,0 +1,7 @@
+{
+  "BAUDRATE": 115200,
+  "RAM_GB": 32,
+  "REFRESH_SECONDS": 2,
+  "TEMP_CPU": "k10temp",
+  "TEMP_GPU": "amdgpu"
+}

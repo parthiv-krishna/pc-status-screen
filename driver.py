@@ -13,12 +13,12 @@ def get_stats(config: dict[str, typing.Any]):
 
     # cpu usage
     cpu_percents = psutil.cpu_percent(percpu=True)
-    stats["CPU_UTIL"] = cpu_percents
+    stats["UTIL_CPU"] = cpu_percents
 
     # memory usage
     ram_used_b = psutil.virtual_memory().used
     ram_used_gb = round(ram_used_b / BYTES_PER_GB, 2)
-    stats["RAM"] = ram_used_gb
+    stats["UTIL_RAM"] = ram_used_gb
 
     # hardware temperatures
     temps = psutil.sensors_temperatures()
@@ -57,3 +57,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main(args.config, args.port)
+
